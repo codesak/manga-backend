@@ -25,9 +25,8 @@ export const getBlogComments = async (req, res) => {
         const  blogId  = req?.params?.id
         console.log(blogId);
       const comments = await BlogComments.find({ blogId: blogId })
-      console.log(comments);
   
-      res.status(201).json({ message: 'Comment Saved', comments })
+      res.status(201).json({comments })
   } catch (error) {
         console.log(error)
       res.status(500).json({ message: 'Error saving comment' })

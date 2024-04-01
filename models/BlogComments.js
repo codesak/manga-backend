@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const BlogCommetnsSchema = new mongoose.Schema(
+const BlogCommentsSchema = new mongoose.Schema(
   {
     userId: String,
     comment:String,
@@ -9,5 +9,5 @@ const BlogCommetnsSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Manga = mongoose.model("BlogComments", BlogCommetns);
+const BlogComments = mongoose.model("BlogComments", BlogCommentsSchema);
 export default BlogComments;

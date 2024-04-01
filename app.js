@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import helmet from "helmet"
 import morgan from "morgan";
 import mangaRoutes from "./routes/mangaChapters.js"
+import blogRoutes from "./routes/blogComments.js"
 import { createProxyMiddleware } from "http-proxy-middleware";
 
 // CONFIGURATION
@@ -27,6 +28,7 @@ app.use(cors());
 // ROUTES
 
 app.use("/manga" , mangaRoutes);
+app.use("/blog" , blogRoutes);
 
 // MONGOOSE SETUP
 

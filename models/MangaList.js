@@ -8,9 +8,7 @@ const MangaListSchema = new mongoose.Schema(
     realeseYear:Number,
     status:String,
     demographic:String,
-    studios:String,
-    summary:String,
-    genres:[{type:String}],
+    summary:String
 
   },
   { timestamps: true }

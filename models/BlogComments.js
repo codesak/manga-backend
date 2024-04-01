@@ -5,6 +5,8 @@ const BlogCommentsSchema = new mongoose.Schema(
     userId: String,
     comment:String,
     blogId:String,
+    userName:String,
+    profilePic:String,
   },
   { timestamps: true }
 );

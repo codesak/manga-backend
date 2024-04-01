@@ -1,8 +1,9 @@
 import express from "express";
-import { blogComments } from "../controllers/blogComments.js";
+import { getBlogComments, postBlogComments } from "../controllers/blogComments.js";
 
 const router = express.Router();
 
-router.post("/comments/", blogComments);
+router.post("/comments/", postBlogComments);
+router.get("/comments/:id", getBlogComments);
 
 export default router;

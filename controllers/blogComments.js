@@ -23,8 +23,8 @@ export const getBlogComments = async (req, res) => {
     console.log(req.params.id);
     try {
         const  blogId  = req?.params?.id
-        console.log(blogId);
-      const comments = await BlogComments.find({ blogId: blogId })
+      const comments = await (await BlogComments.find({ blogId: blogId }).sort({timestamp:1})).reverse()
+      console.log(comments);
   
       res.status(201).json({comments })
   } catch (error) {
